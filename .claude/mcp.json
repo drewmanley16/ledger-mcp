@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ledger": {
+      "command": "npx",
+      "args": ["tsx", "/Users/drewmanley/Documents/projects/ledge/src/index.ts"],
+      "env": {
+        "LEDGER_RPC_URL": "https://eth.llamarpc.com"
+      }
+    }
+  }
+}

@@ -1,17 +1,18 @@
 {
-  "name": "ledge",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "ledger-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Ledger hardware wallets — sign transactions, get addresses, and verify devices from any MCP-compatible AI agent",
   "type": "module",
+  "bin": {
+    "ledger-mcp": "./src/index.ts"
+  },
   "scripts": {
     "start": "tsx src/index.ts",
-    "start:insecure": "SIGNER=insecure tsx src/index.ts",
-    "start:ledger": "SIGNER=ledger tsx src/index.ts"
+    "typecheck": "tsc --noEmit"
   },
-  "keywords": [],
+  "keywords": ["ledger", "mcp", "hardware-wallet", "ethereum", "ai-agent"],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.9.1",
     "@types/ws": "^8.18.1",
@@ -19,10 +20,10 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.100.1",
     "@ledgerhq/device-management-kit": "^1.5.1",
     "@ledgerhq/device-signer-kit-ethereum": "^1.16.0",
     "@ledgerhq/device-transport-kit-node-hid": "^1.0.1",
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "ethers": "^6.16.0"
   }
 }
