@@ -71,7 +71,7 @@ Send 0.01 ETH to 0xRecipient...
 
 | Variable | Default | Description |
 |---|---|---|
-| `LEDGER_RPC_URL` | `https://eth.llamarpc.com` | Ethereum JSON-RPC endpoint |
+| `LEDGER_RPC_URL` | `https://ethereum.publicnode.com` | Ethereum JSON-RPC endpoint |
 
 ---
 

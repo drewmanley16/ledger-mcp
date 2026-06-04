@@ -13,12 +13,12 @@
  *   { "ledger": { "command": "npx", "args": ["ledger-mcp"] } }
  */
 
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio";
 import { z } from "zod";
-import { getEthAddress, signAndSendEth, signMessage, getBalance } from "./dmk.js";
+import { getEthAddress, signAndSendEth, signMessage, getBalance } from "./dmk";
 
-const DEFAULT_RPC = process.env.LEDGER_RPC_URL ?? "https://eth.llamarpc.com";
+const DEFAULT_RPC = process.env.LEDGER_RPC_URL ?? "https://ethereum.publicnode.com";
 const DEFAULT_DERIVATION = "44'/60'/0'/0/0";
 
 const server = new McpServer(
@@ -244,5 +244,12 @@ server.registerTool(
 
 // ── Start ──────────────────────────────────────────────────────────────────────
 
-const transport = new StdioServerTransport();
-await server.connect(transport);
+async function main() {
+  const transport = new StdioServerTransport();
+  await server.connect(transport);
+}
+
+main().catch((err) => {
+  process.stderr.write(`Fatal: ${err}\n`);
+  process.exit(1);
+});
