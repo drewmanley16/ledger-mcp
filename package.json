@@ -8,6 +8,9 @@
   },
   "scripts": {
     "start": "tsx src/index.ts",
+    "start:stub": "tsx src/index.ts --stub",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts",
+    "inspect:stub": "npx @modelcontextprotocol/inspector tsx src/index.ts --stub",
     "typecheck": "tsc --noEmit"
   },
   "keywords": ["ledger", "mcp", "hardware-wallet", "ethereum", "ai-agent"],

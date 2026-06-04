@@ -19,11 +19,13 @@ import { filter, firstValueFrom, map } from "rxjs";
 
 let _dmk: DeviceManagementKit | null = null;
 
+export const STUB_MODE = process.argv.includes("--stub") || process.env.LEDGER_STUB === "1";
+
 export function getDmk(): DeviceManagementKit {
   if (!_dmk) {
-    _dmk = new DeviceManagementKitBuilder()
-      .addTransport(nodeHidTransportFactory)
-      .build();
+    const builder = new DeviceManagementKitBuilder().addTransport(nodeHidTransportFactory);
+    if (STUB_MODE) builder.setStub(true);
+    _dmk = builder.build();
   }
   return _dmk;
 }
