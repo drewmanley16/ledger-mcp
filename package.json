@@ -1,0 +1,28 @@
+{
+  "name": "ledge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "start:insecure": "SIGNER=insecure tsx src/index.ts",
+    "start:ledger": "SIGNER=ledger tsx src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@ledgerhq/device-management-kit": "^1.5.1",
+    "@ledgerhq/device-signer-kit-ethereum": "^1.16.0",
+    "@ledgerhq/device-transport-kit-node-hid": "^1.0.1",
+    "ethers": "^6.16.0"
+  }
+}
