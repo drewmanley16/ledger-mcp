@@ -1,7 +1,7 @@
 {
-  "name": "ledger-mcp",
+  "name": "ledge",
   "version": "0.1.0",
-  "description": "MCP server for Ledger hardware wallets — sign transactions, get addresses, and verify devices from any MCP-compatible AI agent",
+  "description": "Hardware-secured AI crypto agent — put your Ledger in the confirmation loop for every AI-initiated transaction",
   "bin": {
     "ledger-mcp": "./src/index.ts"
   },
@@ -12,8 +12,8 @@
     "inspect:stub": "npx @modelcontextprotocol/inspector tsx src/index.ts --stub",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": ["ledger", "mcp", "hardware-wallet", "ethereum", "ai-agent"],
-  "author": "",
+  "keywords": ["ledger", "mcp", "hardware-wallet", "ethereum", "ai-agent", "claude", "defi", "security"],
+  "author": "Drew Manley",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.9.1",
