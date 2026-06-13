@@ -4,7 +4,7 @@
 
 ledge is an MCP server that puts your [Ledger hardware wallet](https://www.ledger.com/) in the confirmation loop for any AI agent. Every signing operation — transfers, trades, intent signatures — physically blocks until you approve on the device screen. No software path, no env var, no prompt injection bypasses the hardware gate.
 
-Works natively in **Claude Code**, Cursor, Cline, Windsurf, and any MCP-compatible client.
+Works natively in **Claude Code**, Cursor, Cline, Windsurf, and any MCP-compatible client. Stub mode is available for development but must be explicitly enabled — it is never set in production.
 
 ---
 
@@ -12,7 +12,7 @@ Works natively in **Claude Code**, Cursor, Cline, Windsurf, and any MCP-compatib
 
 AI agents that control crypto wallets are a liability. A jailbroken prompt, a confused model, a supply-chain compromise — any of these can drain a hot wallet silently. The standard mitigation is spending limits and logging, but those live in software and software can be overridden.
 
-ledge moves the gate to hardware. The private key never leaves the device. The transaction details appear on the Ledger screen. The user physically taps ✓ or ✗. Nothing else matters.
+ledge moves the gate to hardware. The private key never leaves the device. The transaction details appear on the Ledger screen. The user physically taps ✓ or ✗. No software path bypasses the hardware gate — stub mode is dev-only and requires explicit opt-in.
 
 ---
 
